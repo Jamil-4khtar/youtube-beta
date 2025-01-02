@@ -1,0 +1,61 @@
+
+/* :root {
+    --white-color: #fff;
+    --black-color: #000;
+    --light-white-color: #f0f0f0;
+    --light-gray-color: #e5e5e5;
+    --border-color: #ccc;
+    --primary-color: #3b82f6;
+    --secondary-color: #171717;
+    --overlay-dark-color: rgba(0, 0, 0, 0.6);
+} */
+
+body.dark-mode {
+    background: var(--secondary-color);
+    color: var(--light-gray-color);
+}
+body.dark-mode #container {
+    background: var(--secondary-color);
+    color: var(--light-gray-color);
+}
+body.dark-mode .right button, body.dark-mode .center button {
+    color: var(--light-gray-color);
+    background: var(--overlay-dark-color);
+}
+body.dark-mode .left button {
+    color: var(--light-gray-color);
+}
+body.dark-mode header input {
+    background: var(--secondary-color);
+    color: var(--light-gray-color);
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode div{
+    color: var(--light-gray-color);
+}
+
+body.dark-mode main button {
+    background: var(--overlay-dark-color);
+    color: var(--white-color);
+}
+body.dark-mode aside .nav-container a {
+    background: var(--overlay-dark-color) !important;
+    color: var(--white-color);
+    /* border: 1px solid var(--light-gray-color); */
+}
+
+body.dark-mode footer a {
+    color: var(--light-gray-color);
+}
+
+body.dark-mode .video-container {
+    scrollbar-color: var(--black-color) var(--secondary-color);
+}
+
+
+body.dark-mode .modal-content {
+    background-color: var(--secondary-color);
+}
+
+body.dark-mode .error {
+    background-color: #4b3a3b;
+}
