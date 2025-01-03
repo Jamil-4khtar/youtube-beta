@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Playback Page</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <script type="module" crossorigin src="/assets/videoPage-BE6QaQOC.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/register-C8IjAsV9.js">
+  <link rel="modulepreload" crossorigin href="/assets/auth-BgQ6r9TF.js">
+  <link rel="stylesheet" crossorigin href="/assets/register-Dn3bAing.css">
+  <link rel="stylesheet" crossorigin href="/assets/videoPage-CNexa6zU.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="left">
+                <button id="sideBar-toggle"><i class="uil uil-bars"></i></button>
+                <div id="home-button">
+                    <button id="logo"><i class="fa fa-youtube-play"></i></button>
+                    <h2>YouTube</h2>
+                    <span class="jamil">@Jamil</span>
+                </div>
+            </div>
+            <div class="center">
+                <div id="input-div">
+                    <input type="text" id="search-input" placeholder="Search">
+                </div>
+                <button id="search-button"><i class="uil uil-search"></i></button>
+            </div>
+            <div class="right">
+                <!-- <button id="mobile-search" style="display: none;"><i class="uil uil-search"></i></button> -->
+                <button id="toggle-dark"><i class="uil uil-moon"></i></button>
+                <button><i class="uil uil-bell"></i></button>
+                <button id="userIcon"><i class="uil uil-user"></i></button>
+            </div>
+        </header>
+
+        <main class="video-page">
+
+            <div class="video-content">
+
+                <div class="video-player-container">
+                    <div id="player"></div>
+                </div>
+
+                <div class="video-details">
+                    <h1 id="video-title"></h1>
+
+                    <div class="video-stats">
+                        <!-- <span id="view-count"></span>
+                            <span id="upload-date"></span> -->
+                        <div class="channel-info">
+                            <div class="channel-header">
+                                <img src="" alt="Channel-avatar" id="channel-avatar">
+                            </div>
+                            <div class="channel-text">
+                                <h3 id="channel-name"></h3>
+                                <span id="subscriber-count">101M</span>
+                            </div>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </div>
+
+                        <div class="stats-right">
+                            <button class="action-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span id="like-count"></span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-thumbs-down"></i>
+                                <span id="dislike-count"></span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>Share
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="video-description" id="video-description">
+                        <!-- <p id="view-count"></p>
+                        <p id="upload-date"></p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-videos">
+                <h3>Related Videos</h3>
+                <div id="related-videos-container"></div>
+            </div>
+
+            <div class="comment-section">
+                <h3 class="comment-heading">
+                    <span id="comment-count"></span> Comments
+                </h3>
+                <div class="comment-input">
+                    <img src="assets/icons/user-avatar.png" alt="User Avatar">
+                    <textarea type="text" placeholder="Add a comment..."></textarea>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+        </main>
+    </div>
+
+
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button class="auth-button" type="submit">Login</button>
+            </form>
+
+            <form id="signupForm" class="auth-form">
+                <div class="form-group">
+                    <label for="signupUsername">Username</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="password-group">
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                </div>
+                <button class="auth-button" type="submit">Sign Up</button>
+            </form>
+
+            <div class="divider">
+                <div class="divider-line"></div>
+                <span class="divider-text">or</span>
+                <div class="divider-line"></div>
+            </div>
+
+            <div id="google-btn" class="google-btn">
+                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo">
+                Sign in with Google
+            </div>
+
+        </div>
+    </div>
+
+    <!-- auth scripts -->
+</body>
+
+</html>
