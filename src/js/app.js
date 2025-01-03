@@ -102,7 +102,8 @@ function displayVideo(video) {
             console.log("video is clicked");
             console.log(video);
             const videoId = video.dataset.videoId;
-            window.location.href = `${BASE_URL}src/pages/videoPage.html?videoId=${videoId}`;
+            // window.location.href = `${BASE_URL}src/pages/videoPage.html?videoId=${videoId}`
+            window.location.href = `/youtube-beta/src/pages/videoPage.html?videoId=${videoId}`; 
         })
     })
 }
@@ -130,6 +131,6 @@ export function carryTextFunc() {
         // we can use function to carry the searchvalue as well
 
         // window.location.href = goToSearch;
-        window.location.href = `${BASE_URL}src/pages/searchPage.html`;
+        window.location.href = `/youtube-beta/src/pages/searchPage.html`;
     }
 }

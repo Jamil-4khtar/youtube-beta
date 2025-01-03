@@ -131,7 +131,7 @@ function displayVideo(video) {
             console.log(eachVideo);
             const videoId = eachVideo.dataset.videoId;
             console.log(videoId)
-            window.location.href = `${BASE_URL}src/pages/videoPage.html?videoId=${videoId}`;
+            window.location.href = `/youtube-beta/src/pages/videoPage.html?videoId=${videoId}`;
         })
     })
 
